@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../resources/user_keywords.robot
+Resource    ../keywords/user_keywords.robot
 
 *** Test Cases ***
 

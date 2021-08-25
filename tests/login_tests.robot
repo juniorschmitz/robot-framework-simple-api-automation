@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../resources/login_keywords.robot
+Resource    ../keywords/login_keywords.robot
 
 *** Test Cases ***
 
