@@ -3,6 +3,13 @@ Resource    ../base.robot
 
 *** Keywords ***
 
+Login with factory static data
+    Create Session          serverest           ${BASE_URI}
+    &{payload}=             Get Static Data     login.json
+    ${response}=            Post On Session     serverest        /login   data=${payload}
+    Log To Console          Response: ${response.content}
+    Set Global Variable     ${response}
+
 Login with "${email}" and "${password}"
     Create Session          serverest           ${BASE_URI}
     &{payload}=             Create Dictionary   email=${email}   password=${password}

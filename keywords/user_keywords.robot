@@ -12,7 +12,6 @@ Get specific user "${user_id}"
 Get users
     Create Session          serverest               ${BASE_URI}
     ${response}=            Get On Session          serverest       /usuarios
-    Log To Console          Response: ${response.content}
     Set Global Variable     ${response}
 
 Validade status code "${status_code}"
@@ -26,3 +25,13 @@ Validate get specific user response
     Should Not Be Empty   ${response.json()}
     Should Not Be Empty   ${response.json()["nome"]}
     Should Not Be Empty   ${response.json()["email"]} 
+
+Post create new user
+    Create Session          serverest           ${BASE_URI}
+    &{payload}=             Get Valid User Payload
+    ${response}=            Post On Session     serverest        /usuarios   data=${payload}
+    Log To Console          Response: ${response.content}
+    Set Global Variable     ${response}
+    
+Validate message "${message}"
+    Should Be Equal         ${response.json()["message"]}     ${message}
