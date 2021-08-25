@@ -4,6 +4,10 @@ This project is a simple example on how to make HTTP requests on Robot Framework
 
 The project counts on examples that make Get and Post HTTP calls, new examples on Delete and Put will be added in the near future.
 
+## Application Under Test
+The API Under Test can be found at:
+https://serverest.dev/
+
 ## Infos on how to install dependencies and run the project
 
 First of all, for running the tests and using the project structure, you should have Python and Robot Framework installed on your local environment, after that, you can follow the steps explained in this file.
