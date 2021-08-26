@@ -23,3 +23,7 @@ Validate logged in
     ${the_token}=           Set Variable    ${response.json()["authorization"]}
     Log To Console          Token salvo: ${the_token}
     Set Global Variable     ${the_token}
+
+Have logged in and saved token
+    Login with factory static data
+    Validate logged in
