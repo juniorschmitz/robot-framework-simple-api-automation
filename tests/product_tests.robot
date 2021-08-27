@@ -10,3 +10,9 @@ Cenário: Create a new product
     Post create new product
     Validade status code "201"
     Validate message "Cadastro realizado com sucesso"
+
+Cenário: Delete a product
+    Have created a new product
+    Delete the product
+    Validade status code "200"
+    Validate message "Registro excluído com sucesso"
